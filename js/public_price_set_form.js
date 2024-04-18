@@ -111,6 +111,7 @@ CRM.percentagepricesetfield = {
 
     var finalTotal;
     if (cj('#' + CRM.vars.percentagepricesetfield.percentage_checkbox_id).prop('checked')) {
+      baseTotal = baseTotal - 1;
       var percentage = CRM.vars.percentagepricesetfield.percentage;
       var extra = (baseTotal*percentage/100);
       var extra_tax = extra * (CRM.vars.percentagepricesetfield.tax_rate / 100);
